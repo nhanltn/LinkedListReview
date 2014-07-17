@@ -25,6 +25,8 @@ int main(){
     list.removeAt(0);
     list.removeAt(6);
     
+    Node d(15);
+    list.editAt(6, d);
     printList(list);
 }
 

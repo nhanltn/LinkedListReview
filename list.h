@@ -12,9 +12,10 @@ class LinkedList{
         void removeFirst();
         void removeLast();
         void removeAt(int index);
-        void editAt(int index);
+        void editAt(int index, Node newNode);
         Node *getLast() {return last;}
         Node *getFirst() {return first;}
+        Node *get(int index);
         
     private:
         int size;

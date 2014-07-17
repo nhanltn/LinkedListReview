@@ -81,6 +81,29 @@ void LinkedList::removeAt(int index){
     }
 }
 
-void LinkedList::editAt(int index){
-    
+Node* LinkedList::get(int index){
+    if (index == 0)
+        return first;
+    else if (index == size)
+        return last;
+    else {
+        Node *p;
+        p = first;
+        int pos = 0;
+        while (p != NULL && pos != index){
+            p = p->getNext();
+            pos++;
+        }
+        
+        if (pos == index)
+            return p;
+    }
+}
+
+void LinkedList::editAt(int index, Node newValue){
+    Node *p;
+    p = get(index);
+    int i = newValue.getData();
+    if (p != NULL)
+        p->setData(newValue.getData());
 }
